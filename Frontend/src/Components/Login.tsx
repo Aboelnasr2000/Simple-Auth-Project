@@ -8,19 +8,21 @@ interface ILoginModel {
 
 const Login = () => {
   const [data, setData] = useState<ILoginModel>({ email: "", password: "" });
+  const [message, setMessage] = useState<string>("");
   const navigate = useNavigate();
 
+
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const id = event.target.id;
-    const value = event.target.value;
+    const { id, value } = event.target;
     setData({ ...data, [id]: value });
+    setMessage("");
   };
 
   const handleFormSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     if (data.email === "" || data.password === "") {
-      alert("Please fill all the fields");
+      setMessage("Please fill all the fields");
       return;
     }
 
@@ -37,7 +39,7 @@ const Login = () => {
       });
 
       if (!response.ok) {
-        alert("email or password is incorrect");
+        setMessage("Email or Password is incorrect");
         return;
       }
 
@@ -47,7 +49,7 @@ const Login = () => {
       navigate("/");
     } catch (error) {
       console.error("Login error:", error);
-      alert("Something went wrong. Try again.");
+      setMessage("Something went wrong. Try again.");
     }
   };
 
@@ -80,6 +82,7 @@ const Login = () => {
 
         <button type="submit">Log In</button>
         <div className="social">
+          {message && <p>{message}</p>}
           <h4>
             <Link to="/register">Register</Link>
           </h4>

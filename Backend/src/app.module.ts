@@ -8,7 +8,7 @@ import { AuthModule } from './auth/auth.module';
   imports: [
     AuthModule,
     ConfigModule.forRoot(),
-    MongooseModule.forRoot(""),
+    MongooseModule.forRoot("mongodb+srv://alyaboelnasr:wYaRRDw48DufyxpY@aisamurai.ukp55kz.mongodb.net"),
   ],
 })
 export class AppModule {}

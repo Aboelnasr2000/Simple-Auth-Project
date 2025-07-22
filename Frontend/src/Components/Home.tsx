@@ -11,12 +11,14 @@ const Home: React.FC = () => {
   };
 
   return (
-    <div style={{ padding: '2rem' }}>
-      <h1>Welcome to the Home Page 🎉</h1>
-      <p>You are now logged in.</p>
-      <button onClick={handleLogout} style={{ marginTop: '1rem' }}>
-        Logout
-      </button>
+    <div className="home-page-container">
+      <div className="home-card" >
+        <h3>Welcome to the Home Page 🎉</h3>
+        <p>You are now logged in.</p>
+        <button onClick={handleLogout}>
+          Logout
+        </button>
+      </div>
     </div>
   );
 };

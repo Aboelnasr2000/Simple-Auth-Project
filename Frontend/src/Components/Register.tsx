@@ -12,6 +12,7 @@ const Register = () => {
     name: "",
     username: "",
     password: "",
+    confirmPassword: "",
   });
 
   const [message, setMessage] = useState<string>("");
@@ -24,34 +25,35 @@ const Register = () => {
   };
 
   const resetData = () => {
-    setData({ name: "", username: "", password: "" });
+    setData({ name: "", username: "", password: "" , confirmPassword: "" });
   };
 
   const handleFormSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    const { name, email, password } = data;
+    const { name, email, password , confirmPassword } = data;
 
-    // Name validation
     if (name.trim().length < 3) {
       setMessage("Name must be at least 3 characters long.");
       return;
     }
 
-    // Email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
       setMessage("Please enter a valid email address.");
       return;
     }
 
-    // Password validation
     const passwordRegex =
       /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
     if (!passwordRegex.test(password)) {
       setMessage(
         "Password must be at least 8 characters, include one letter, one number, and one special character."
       );
+      return;
+    }
+    if (password !== confirmPassword) {
+      setMessage("Passwords do not match.");
       return;
     }
 
@@ -121,6 +123,16 @@ const Register = () => {
           value={data.password}
           onChange={handleInputChange}
         />
+
+        <label htmlFor="confirmPassword">Confirm Password</label>
+        <input
+          type="password"
+          placeholder="Confirm Password"
+          id="confirmPassword"
+          value={data.confirmPassword}
+          onChange={handleInputChange}
+        />
+
 
         <button type="submit">Register</button>
         <div className="social">
