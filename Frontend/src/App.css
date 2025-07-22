@@ -144,6 +144,10 @@ button:hover {
 .social p {
   color: rgb(255, 55, 55)
 }
+.social p #successMessage {
+  color: rgb(156, 247, 180)
+}
+
 
 .home-page-container {
   width: 400px;

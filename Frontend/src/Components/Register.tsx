@@ -16,6 +16,8 @@ const Register = () => {
   });
 
   const [message, setMessage] = useState<string>("");
+  const [successMessage, setsuccessMessage] = useState<string>("");
+
   const navigate = useNavigate();
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -76,7 +78,7 @@ const Register = () => {
         return;
       }
 
-      setMessage("User registered successfully.");
+      setsuccessMessage("User registered successfully.");
       resetData();
 
       setTimeout(() => {
@@ -137,6 +139,7 @@ const Register = () => {
         <button type="submit">Register</button>
         <div className="social">
           {message && <p>{message}</p>}
+          {successMessage && <p id="successMessage">{successMessage}</p>}
           <br />
           <h4>
             <Link to="/login">Login</Link>
