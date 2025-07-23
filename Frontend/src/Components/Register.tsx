@@ -138,7 +138,7 @@ const Register = () => {
 
         <button type="submit">Register</button>
         <div className="social">
-          {message && <p>{message}</p>}
+          {message && <p id ="errorMessage">{message}</p>}
           {successMessage && <p id="successMessage">{successMessage}</p>}
           <br />
           <h4>

@@ -1,0 +1,5 @@
+[2025-07-23T11:14:51.860Z] Failed To Register Email:  alyaboelnasr@gmail.com Already Exists
+[2025-07-23T11:14:59.560Z] Registered Email:  alyaboelnasr1@gmail.com Successfully
+[2025-07-23T11:16:45.317Z] Registered Email:  alyaboelnasr2@gmail.com Successfully
+[2025-07-23T11:18:45.060Z] Registered Email:  alyaboelnasr3@gmail.com Successfully
+[2025-07-23T11:20:17.483Z] Registered Email:  alyaboelnasr23@gmail.com Successfully

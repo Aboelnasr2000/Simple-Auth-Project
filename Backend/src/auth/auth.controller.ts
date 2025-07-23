@@ -33,7 +33,6 @@ export class AuthController {
   @ApiBearerAuth()
   @ApiOperation({ summary: 'Get current logged-in user' })
   me(@Req() req) {
-    console.log('User from request:', req.user);
     return req.user;
   }
 }
