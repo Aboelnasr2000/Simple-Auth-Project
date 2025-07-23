@@ -21,10 +21,8 @@ Before you begin, ensure you have the following installed:
 First, clone the project repository from GitHub to your local machine:
 
 ```bash
-git clone [YOUR_GITHUB_REPO_LINK_HERE]
+git clone https://github.com/Aboelnasr2000/Simple-Auth-Project.git
 ```
-
-Replace `[YOUR_GITHUB_REPO_LINK_HERE]` with the actual URL of your GitHub repository.
 
 ### 2. Set Up and Run the Frontend
 
