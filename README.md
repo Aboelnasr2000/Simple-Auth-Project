@@ -10,21 +10,19 @@ Follow these steps to set up and run the project on your local machine.
 
 Before you begin, ensure you have the following installed:
 
-* **Node.js** (LTS version recommended)
+* **Node.js** 
 
-* **npm** (Node Package Manager, usually comes with Node.js)
+* **npm**
 
-* **MongoDB** (running locally or accessible via a cloud service like MongoDB Atlas)
+* **MongoDB**
 
 ### 1. Clone the Repository
 
 First, clone the project repository from GitHub to your local machine:
 
 ```bash
-git clone [YOUR_GITHUB_REPO_LINK_HERE]
+git clone https://github.com/Aboelnasr2000/Simple-Auth-Project.git
 ```
-
-Replace `[YOUR_GITHUB_REPO_LINK_HERE]` with the actual URL of your GitHub repository.
 
 ### 2. Set Up and Run the Frontend
 
@@ -65,7 +63,8 @@ The backend requires environment variables for database connection and security.
 ```bash
 MONGO_URI="MongoDb URL"
 JWT_SECRET="Key"
-PORT=4000
+PORT = 4000
+FRONTEND_URL = http://localhost:5173
 ```
 
 *Replace `MongoDb URL` and `Key` with your actual values.*
